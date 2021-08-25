@@ -31,10 +31,7 @@ You can learn more about the NativeScript core theme at https://github.com/nativ
   </StackLayout>
   <ListView [items]="players$ | async" row="1">
     <ng-template let-player="item">
-      <StackLayout>
-        <Label style="font-size: 20px; font-weight: bold" [text]="player.name"></Label>
-        <Label col="1" row="0" [text]="player.name" textWrap="true"></Label>
-      </StackLayout>
+      <item-node [item]="player"></item-node>
     </ng-template>
   </ListView>
 </GridLayout>
